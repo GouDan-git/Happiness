@@ -1,5 +1,5 @@
 <template>
-  <div class="cloud-type-one">
+  <div class="cloud-type-one" :style="'zoom:' + zoom">
     <div class="circle-left-box">
       <div class="circle-left"></div>
     </div>
@@ -21,9 +21,39 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import { defineProps, ref } from "vue";
+
+const props = defineProps({
+  height: String,
+});
+/**
+ * @description 根据height计算图片的zoom
+ * @param height props属性
+ */
+const getZoom = (height: string | undefined) => {
+  if (height == undefined) return 1;
+  const index = height.indexOf("px");
+  let finalHeight: string = "";
+  if (index !== -1) {
+    finalHeight = height.substring(0, index);
+  }
+  return parseInt(finalHeight) / 118;
+};
+const zoom = ref(1);
+zoom.value = getZoom(props.height);
+console.log(
+  "%c [ zoom ]-45",
+  "font-size:13px; background:pink; color:#bf2c9f;",
+  zoom.value
+);
+</script>
+
 <style lang="scss" scoped>
 $cloud-color: #b0c4de;
 .cloud-type-one {
+  height: 118px;
+  width: 296px;
   .circle-left-box {
     position: absolute;
     top: 25px;

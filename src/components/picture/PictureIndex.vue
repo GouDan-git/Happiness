@@ -5,7 +5,7 @@ import TreeTypeOne from "@/components/picture/tree/TypeOne.vue";
 
 <template>
   <div class="picture">
-    <CloudTypeOne class="cloud-type-one" />
+    <CloudTypeOne class="cloud-type-one" height="118px" />
     <TreeTypeOne class="tree-type-one" />
   </div>
 </template>

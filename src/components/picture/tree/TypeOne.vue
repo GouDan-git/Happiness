@@ -15,6 +15,15 @@
     <div class="circle-three-box">
       <div class="circle-three circle-model"></div>
     </div>
+    <div class="leaf-paint leaf-paint-one"></div>
+    <div class="leaf-paint leaf-paint-two"></div>
+    <div class="leaf-paint leaf-paint-three"></div>
+    <div class="leaf-paint leaf-paint-four"></div>
+    <div class="leaf-paint leaf-paint-five"></div>
+    <div class="leaf-paint leaf-paint-six"></div>
+    <div class="leaf-paint leaf-paint-seven"></div>
+    <div class="leaf-paint leaf-paint-eight"></div>
+    <div class="leaf-paint leaf-paint-neight"></div>
   </div>
 </template>
 <script setup lang="ts">
@@ -37,7 +46,7 @@ $tree-root-color: #836151;
     width: 80px;
     height: 100px;
     border-radius: 50%;
-    border: 5px solid $tree-leaf-color;
+    border: 1px solid $tree-leaf-color;
   }
   .circle-one-box {
     position: absolute;
@@ -88,7 +97,7 @@ $tree-root-color: #836151;
       top: -80px;
       left: -30px;
       border-radius: 50%;
-      border: 5px solid $tree-root-color;
+      border: 2px solid $tree-root-color;
     }
   }
   .circle-right-root-box {
@@ -105,8 +114,50 @@ $tree-root-color: #836151;
       top: -80px;
       left: 0;
       border-radius: 50%;
-      border: 5px solid $tree-root-color;
+      border: 2px solid $tree-root-color;
     }
+  }
+  .leaf-paint {
+    position: absolute;
+    width: 0;
+    height: 0;
+    box-shadow: 10px 0px 20px 20px $tree-leaf-color;
+  }
+  .leaf-paint-one {
+    top: 30px;
+    left: 68px;
+  }
+  .leaf-paint-two {
+    top: 40px;
+    left: 52px;
+  }
+  .leaf-paint-three {
+    top: 70px;
+    left: 84px;
+  }
+  .leaf-paint-four {
+    top: 80px;
+    left: 40px;
+  }
+  .leaf-paint-five {
+    top: 120px;
+    left: 30px;
+  }
+  .leaf-paint-six {
+    top: 100px;
+    left: 20px;
+  }
+  .leaf-paint-seven {
+    top: 114px;
+    left: 90px;
+  }
+  .leaf-paint-eight {
+    top: 100px;
+    left: 70px;
+  }
+  .leaf-paint-neight {
+    top: 100px;
+    left: 100px;
   }
 }
 </style>
